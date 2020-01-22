@@ -1,5 +1,83 @@
+{%set
+form = {
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: ':שם מלא'
+    },
+    {
+      name: 'input',
+      type: 'email',
+      placeholder: ':מייל'
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: ':טלפון'
+    }
+  ]
+}
+%}  
+
 <!-- begin hero -->
-<section class="hero">
-  <h1>hello from hero</h1>
+<section class="hero"> 
+
+  <div class="hero__form hero-form">
+    <div class="hero-form__title">הצטרפו אלינו ליום הפתוח ברופין </div>
+    <div class="hero-form__subttl">ולמהפכת ה-</div>
+
+    <img class="hero-form__img-title js-lazy" alt="" src="" data-src="./img/job-u.png"/>
+
+    <div class="hero-form__date hero-form-date">
+      <div class="hero-form-date__item">שישי</div>
+      <div class="hero-form-date__item">09:30</div>
+      <div class="hero-form-date__item">14.2.2020</div>
+    </div>
+
+    <form class="hero-form__form form">
+      {% for i in form.fields %}
+      <div class="form__field">
+        {{ mixins.input(
+          name = i.name,
+          mod = i.mod,
+          type = i.type,
+          placeholder = i.placeholder,
+          value = '',
+          fieldClass = ''
+        ) }}
+      </div>      
+      {% endfor %}
+
+      <div class="form__field">
+        {{ mixins.input(
+          name = 'checkbox',
+          mod = '',
+          type = 'checkbox',
+          placeholder = '',
+          value = '',
+          fieldClass = '',
+          label = { last: '<span>אני מאשר/ת קבלת עדכונים במייל</span>' }
+        ) }}
+      </div>
+
+      <div class="form__field">
+        {{ mixins.btn(
+          title = 'כן, אני מגיע',
+          mod = ''
+        ) }}
+      </div>
+    </form>
+  </div>
+
+  <div class="hero__video">
+    <button class="hero__video-btn">
+      <img class="js-lazy" alt="" src="" data-src="./img/play-btn.png"/>
+    </button>
+
+    <div class="hero__video-bg js-lazy" data-background-image="./img/bg-hero.jpg"></div>
+
+    <iframe class="hero__iframe js-lazy" src="about:blank" data-src="https://www.youtube.com/embed/SyhdFuVRE1o?rel=0&amp;autoplay=1&amp;mute=1&amp;playsinline=1" id="youtubePlayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </div>
 </section>
 <!-- end hero -->

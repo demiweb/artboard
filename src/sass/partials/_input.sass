@@ -1,0 +1,43 @@
+.input
+  width: 100%
+  display: block
+  #{$text-inputs}
+    width: 100%
+    height: rem(75)
+    padding: 1rem rem(20)
+    background-color: $light    
+    font-size: rem(47)
+    color: $black    
+    +placeholder
+      color: $black
+  &--checkbox
+    font-size: rem(47)
+    position: relative
+    padding-right: 1.3em
+    user-select: none
+    text-align: right
+    #{$check-inputs}
+      opacity: 0
+      position: absolute
+      width: 0
+      height: 0
+      z-index: -10
+      &:checked + span
+        &::after
+          content: ''
+          +icon-arrow(.6, .3, .05, #000, -45, em)
+          top: .4em
+          right: .15em
+          position: absolute
+          display: block
+    span
+      &::before
+        content: ''
+        border: 1px solid #cecfd0
+        width: .9em
+        height: .9em
+        top: .2em
+        right: 0
+        background-color: #fff
+        position: absolute
+        display: block

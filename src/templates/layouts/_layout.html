@@ -1,6 +1,6 @@
 {% import "mixins/_all.html" as mixins %}
 <!doctype html>
-<html>
+<html dir="rtl">
   <head>
     <meta charset="utf-8"/>
     <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
@@ -8,13 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#fff"/>
     <meta name="format-detection" content="telephone=no"/>
+
+    <link href="https://fonts.googleapis.com/earlyaccess/opensanshebrew.css" rel="stylesheet" />
+    <!-- Magnific Popup core CSS file -->
+    <link href="https://mtr.ruppin.ac.il/wp-content/themes/ruppin/landing-page/scss/magnific-popup.css" rel="stylesheet">
+    <link href="https://mtr.ruppin.ac.il/wp-content/themes/ruppin/landing-page/scss/style.css" rel="stylesheet" />
+    <link href="https://mtr.ruppin.ac.il/wp-includes/css/dashicons.min.css" rel="stylesheet" />
+    
     <link rel="stylesheet" media="all" href="css/app.css"/>
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
-      {% include "partials/_header.html" %}
+      {# {% include "partials/_header.html" %} #}
       <!-- begin main -->
       <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">
         {% block content %}{% endblock %}

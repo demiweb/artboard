@@ -1,0 +1,37 @@
+.hero
+  +flex
+  &__form
+    width: percentage(560 / 1920)
+    background-color: $accent
+  &__video
+    width: percentage((1920 - 560) / 1920)
+    position: relative
+  &__video-bg
+    +cover
+    +coverdiv
+    z-index: 2
+
+.hero-form
+  color: $white
+  text-align: center
+  padding: 35px 15px
+  &__title
+    font-size: rem(50)
+  &__subttl
+    font-size: rem(58)
+    font-weight: 700
+  &__img-title
+    margin-bottom: rem(30)
+  &__date
+    margin-bottom: rem(30)
+
+.hero-form-date
+  font-size: rem(65)
+  +flex(space-between, center)
+  &__item
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+    flex-grow: 1
+    +notfirst
+      border-right: 1px solid currentColor
