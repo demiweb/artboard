@@ -23,51 +23,53 @@ form = {
 <!-- begin hero -->
 <section class="hero"> 
   <div class="hero__form hero-form">
-    <div class="hero-form__title">הצטרפו אלינו ליום הפתוח ברופין </div>
-    <div class="hero-form__subttl">ולמהפכת ה-</div>
+    <div class="hero__form-inner">
+      <div class="hero-form__title">הצטרפו אלינו ליום הפתוח ברופין </div>
+      <div class="hero-form__subttl">ולמהפכת ה-</div>
 
-    <img class="hero-form__img-title js-lazy" alt="" src="" data-src="./img/job-u.png"/>
+      <img class="hero-form__img-title js-lazy" alt="" src="" data-src="./img/job-u.png"/>
 
-    <div class="hero-form__date date-block">
-      <div class="date-block__item">שישי</div>
-      <div class="date-block__item">09:30</div>
-      <div class="date-block__item">14.2.2020</div>
+      <div class="hero-form__date date-block">
+        <div class="date-block__item">שישי</div>
+        <div class="date-block__item">09:30</div>
+        <div class="date-block__item">14.2.2020</div>
+      </div>
+
+      <form class="hero-form__form form">
+        {% for i in form.fields %}
+        <div class="form__field">
+          {{ mixins.input(
+            name = i.name,
+            mod = i.mod,
+            type = i.type,
+            placeholder = i.placeholder,
+            value = '',
+            fieldClass = ''
+          ) }}
+        </div>      
+        {% endfor %}
+
+        <div class="form__field">
+          {{ mixins.input(
+            name = 'checkbox',
+            mod = '',
+            type = 'checkbox',
+            placeholder = '',
+            value = '',
+            fieldClass = '',
+            label = { last: '<span>אני מאשר/ת קבלת עדכונים במייל</span>' }
+          ) }}
+        </div>
+
+        <div class="form__field form__btn">
+          {{ mixins.btn(
+            title = 'כן, אני מגיע',
+            mod = '',
+            href = false
+          ) }}
+        </div>
+      </form>
     </div>
-
-    <form class="hero-form__form form">
-      {% for i in form.fields %}
-      <div class="form__field">
-        {{ mixins.input(
-          name = i.name,
-          mod = i.mod,
-          type = i.type,
-          placeholder = i.placeholder,
-          value = '',
-          fieldClass = ''
-        ) }}
-      </div>      
-      {% endfor %}
-
-      <div class="form__field">
-        {{ mixins.input(
-          name = 'checkbox',
-          mod = '',
-          type = 'checkbox',
-          placeholder = '',
-          value = '',
-          fieldClass = '',
-          label = { last: '<span>אני מאשר/ת קבלת עדכונים במייל</span>' }
-        ) }}
-      </div>
-
-      <div class="form__field form__btn">
-        {{ mixins.btn(
-          title = 'כן, אני מגיע',
-          mod = '',
-          href = false
-        ) }}
-      </div>
-    </form>
   </div>
 
   <div class="hero__video-wrap">
