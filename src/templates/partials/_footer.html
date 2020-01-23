@@ -1,5 +1,92 @@
+{%set
+form = {
+  fields: [
+    {
+      name: 'input',
+      mod: 'input--sm',
+      type: 'text',
+      placeholder: ':שם מלא'
+    },
+    {
+      name: 'input',
+      mod: 'input--sm',
+      type: 'email',
+      placeholder: ':מייל'
+    }
+  ]
+}
+%} 
+
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <form class="footer__form footer-form">
+    <div class="footer-form__row">
+      {% for i in form.fields %}
+      <div class="footer-form__col footer-form__col--3">
+        {{ mixins.input(
+          name = i.name,
+          mod = i.mod,
+          type = i.type,
+          placeholder = i.placeholder,
+          value = '',
+          fieldClass = ''
+        ) }}
+      </div>
+      {% endfor %}
+      <div class="footer-form__col footer-form__col--3 footer-form__col--checkbox">
+        {{ mixins.input(
+          name = 'input',
+          mod = 'input--sm',
+          type = 'tel',
+          placeholder = ':טלפון',
+          value = '',
+          fieldClass = ''
+        ) }}
+
+        {{ mixins.input(
+          name = 'checkbox',
+          mod = '',
+          type = 'checkbox',
+          placeholder = '',
+          value = '',
+          fieldClass = '',
+          label = { last: '<span>אני מאשר/ת קבלת עדכונים במייל</span>' }
+        ) }}
+      </div>
+
+      <div class="footer-form__col footer-form__col--3 footer-form__btn">
+        {{ mixins.btn(
+          title = 'כן, אני מגיע',
+          mod = '',
+          href = false
+        ) }}
+      </div>
+    </div>
+
+{#     <div class="footer-form__row footer-form__row--row-end">
+      <div class="footer-form__col footer-form__col--6 footer-form__checkbox">
+        {{ mixins.input(
+          name = 'checkbox',
+          mod = '',
+          type = 'checkbox',
+          placeholder = '',
+          value = '',
+          fieldClass = '',
+          label = { last: '<span>אני מאשר/ת קבלת עדכונים במייל</span>' }
+        ) }}
+      </div>
+    </div> #}
+  </form>
+
+  <div class="footer__logos">
+    
+    <div class="footer__logo">
+      <img class="js-lazy" alt="" src="" data-src="./img/footer-logo.png"/>
+    </div>
+    <div class="footer__logo">      
+      <img class="js-lazy" alt="" src="" data-src="./img/job-u-lg.png"/>
+      <div class="footer__logo-title">מגדירים מחדש את עולם התעסוקה והלימודים.</div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

@@ -1,0 +1,47 @@
+.footer
+  background-color: $accent
+  padding: rem(90) rem(120) rem(50)
+  +lg
+    padding: rem(90) rem(30) rem(50)
+  &__form
+    margin-bottom: rem(55)
+  &__logos
+    +flex(center, center)
+  &__logo
+    margin-left: rem(50)
+    margin-right: rem(50)
+    color: $white
+    font-weight: 900
+    font-size: 0
+    img
+      display: block
+  &__logo-title
+    font-size: rem(40)
+
+.footer-form
+  $column-gutter: rem(12)
+
+  &__row
+    margin-left: -$column-gutter
+    margin-right: -$column-gutter
+    +flex(flex-start, normal, row, wrap)
+    &--row-end
+      justify-content: flex-end
+  &__col
+    padding-left: $column-gutter / 2
+    padding-right: $column-gutter / 2
+    margin-bottom: $column-gutter
+    +sm
+      width: 100%
+    &--3
+      width: 25%
+    &--6
+      width: 50%
+    &--checkbox
+      .input
+        &:not(.input--checkbox)
+          margin-bottom: $column-gutter
+        &--checkbox
+          color: $white
+  &__btn
+    text-align: center

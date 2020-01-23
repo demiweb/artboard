@@ -1,0 +1,50 @@
+.section
+  padding: rem(95) rem(120)
+  +lg
+    padding: rem(95) rem(30)
+  &__title
+    font-size: rem(101)
+    font-weight: 900
+    color: $accent
+    text-align: center
+    position: relative
+  &__subttl
+    text-align: center
+    font-size: rem(65)
+    font-weight: 700
+    color: $accent
+    position: relative
+    margin-bottom: rem(160)
+  &__block
+    margin-bottom: rem(60)
+    max-width: percentage(1630 / 1920)
+    +sm
+      max-width: none
+    &--mb-lg
+      margin-bottom: rem(170)
+  &__title-arr
+    position: absolute
+    top: 100%
+    left: 0
+    width: rem(190)
+    +sm
+      display: none
+
+.section-block
+  font-size: rem(45)
+  &__title
+    font-size: rem(100)
+    font-weight: 700
+    color: $accent
+    // white-space: nowrap
+    margin-bottom: rem(30)
+    &--sm
+      font-size: rem(89)
+  &__text
+    p
+      +notlast
+        margin-bottom: rem(30)
+  &__question-mark
+    width: rem(50)
+  &__job-u
+    width: rem(500)

@@ -1,5 +1,5 @@
 export const {
-  // IS_ACTIVE,
+  IS_ACTIVE,
   // IS_OPEN,
   // IS_VISIBLE,
   IS_READY,
@@ -17,7 +17,7 @@ export const {
   // IS_VALID,
   // IS_FIXED,
 } = {
-  // IS_ACTIVE: 'active',
+  IS_ACTIVE: 'active',
   // IS_OPEN: 'open',
   // IS_VISIBLE: 'visible',
   IS_READY: 'is-ready',

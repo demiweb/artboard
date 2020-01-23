@@ -1,7 +1,7 @@
 export default {
   lazy: 'js-lazy',
-  menu: {
-    burger: 'js-burger',
-    menu: 'js-menu',
+  heroVideo: {
+    btn: 'js-hero-video-btn',
+    video: 'js-hero-video',
   },
 }

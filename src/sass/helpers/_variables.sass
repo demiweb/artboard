@@ -21,3 +21,7 @@ $accent: #004e6c
 =windowHeight($offset: 0px)
   height: calc(100vh - #{$offset})
   height: calc((var(--vh, 1vh) * 100) - #{$offset})
+
+=windowMinHeight($offset: 0px)
+  min-height: calc(100vh - #{$offset})
+  min-height: calc((var(--vh, 1vh) * 100) - #{$offset})

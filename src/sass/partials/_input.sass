@@ -3,15 +3,18 @@
   display: block
   #{$text-inputs}
     width: 100%
-    height: rem(75)
+    height: rem(80)
     padding: 1rem rem(20)
     background-color: $light    
     font-size: rem(47)
     color: $black    
     +placeholder
       color: $black
+  &--sm
+    #{$text-inputs}
+      height: rem(70)
   &--checkbox
-    font-size: rem(47)
+    font-size: rem(30)
     position: relative
     padding-right: 1.3em
     user-select: none
@@ -25,7 +28,7 @@
       &:checked + span
         &::after
           content: ''
-          +icon-arrow(.6, .3, .05, #000, -45, em)
+          +icon-arrow(.6, .3, .1, #000, -45, em)
           top: .4em
           right: .15em
           position: absolute

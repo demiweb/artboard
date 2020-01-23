@@ -1,0 +1,69 @@
+<!-- begin section -->
+<section class="section">
+  <h1 class="section__title">
+    
+  בואו ליום הפתוח ברופין</h1>
+
+  <div class="section__subttl">
+  <img class="section__title-arr js-lazy" alt="" src="" data-src="./img/arrow-after header.png"/>
+  ותשמעו איך מהפכת ה- {{ mixins.caption() }} שלנו מביאה אתכם לג’וב נחשק</div>
+
+  <div class="section__block section-block">
+    <h2 class="section-block__title">
+      מה זה 
+      <img class="section-block__job-u js-lazy" alt="" src="" data-src="./img/job-u-sm.png"/>
+      <img class="section-block__question-mark js-lazy" alt="" src="" data-src="./img/question1 mark-1.png"/>      
+    </h2>
+
+    <div class="section-block__text">
+      <p>הנדסאי רופין לומדים במסלול מואץ של שנתיים לימודים ועבודה. הם מסיימים עם תואר וניסיון 
+        מקצועי מתאים ומשתלבים בצורה המהירה והבטוחה ביותר במיטב החברות במשק.
+      </p>
+      <strong>אנחנו קוראים לזה {{ mixins.caption() }}מגדירים מחדש את עולם התעסוקה והלימודים.</strong>
+    </div>
+  </div>
+
+  <div class="section__block section__block--mb-lg section-block">
+    <h2 class="section-block__title section-block__title-sm">
+      למה כדאי לכם להגיע
+      <img class="section-block__question-mark js-lazy" alt="" src="" data-src="./img/question1 mark-1.png"/>
+    </h2>
+
+    {{ mixins.list(
+      name = 'list',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { item: mixins.icon('circle') + 'ברופין, עובדים בחברות נוצצות,  כבר במהלך הלימודים' },
+        { item: mixins.icon('circle') + 'תוכניות הלימודים נכתבו מחדש בשיתוף ארגונים מתקדמים בתחומם' },
+        { item: mixins.icon('circle') + 'מייצרים לך את הניסיון המקצועי ברמה הגבוהה ביותר שיש, עוד בזמן הלימודים' },
+        { item: mixins.icon('circle') + 'מתרגלים ומתנסים בטכנולוגיות שמחוברות ישירות לתעשיות מתקדמות' },
+        { item: mixins.icon('circle') + 'ברופין, מקרבים אותך הכי מהר , הכי גבוה, הכי בטוח למעסיק הבא שלך' },
+        { item: mixins.icon('circle') + 'מסיימים שנתיים לימודים גם עם תואר וגם עם ניסיון מקצועי מתאים' }
+      ]
+    ) }}
+  </div>
+
+  <!-- begin date-info -->
+  <div class="date-info">
+    <div class="date-info__block">
+      <div class="date-info__title">
+        הצטרפו אלינו ליום הפתוח
+      </div>
+
+      <div class="date-info__date date-block">
+        <div class="date-block__item">שישי</div>
+        <div class="date-block__item">09:30</div>
+        <div class="date-block__item">14.2.2020</div>
+      </div>
+
+      <img class="date-info__block-img js-lazy" alt="" src="" data-src="./img/quote.svg"/>
+    </div>
+
+    <div class="date-info__imgs">
+      <img class="date-info__img date-info__img--right js-lazy" alt="" src="" data-src="./img/plane.svg"/>
+      <img class="date-info__img date-info__img--left js-lazy" alt="" src="" data-src="./img/megaphone.svg"/>
+    </div>    
+  </div>
+  <!-- end date-info -->
+</section>
+<!-- end section -->
